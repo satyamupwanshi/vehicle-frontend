@@ -14,6 +14,7 @@ function VehicleList() {
     axios.get('http//vehicle-dealer-4.onrender.com/api/vehicles/', {
       headers: token ? { Authorization: `Bearer ${token}` } : {}
     })
+    
       .then(res => {
         setVehicles(res.data);
         setLoading(false);
@@ -52,7 +53,7 @@ function VehicleList() {
 
             {v.image && (
               <img
-                src={`http://localhost:8000/media/${v.image}`}
+              src={`https://vehicle-dealer-4.onrender.com/media/${v.image}`}
                 alt={v.title}
                 style={{
                   width: '300px',
