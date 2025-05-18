@@ -22,12 +22,13 @@ function VehicleForm() {
     formData.append('type', form.type);
     formData.append('image', form.image);
 
-    axios.post('http://localhost:8000/api/vehicles/', formData, {
+    axios.post('https://vehicle-dealer-4.onrender.com/api/vehicles/', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
         Authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     })
+    
       .then(() => alert("Vehicle listed successfully"))
       .catch(() => alert("Failed to list vehicle"));
   };
