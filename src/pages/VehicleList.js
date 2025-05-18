@@ -11,7 +11,7 @@ function VehicleList() {
   useEffect(() => {
     const token = localStorage.getItem('token');
 
-    axios.get('http://localhost:8000/api/vehicles/', {
+    axios.get('http//vehicle-dealer-4.onrender.com/api/vehicles/', {
       headers: token ? { Authorization: `Bearer ${token}` } : {}
     })
       .then(res => {
