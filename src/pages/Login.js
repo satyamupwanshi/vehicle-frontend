@@ -12,7 +12,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:8000/api/token/', credentials);
+      const res = await axios.post('https://vehicle-dealer-4.onrender.com/api/token/', credentials);
       localStorage.setItem('token', res.data.access);
       localStorage.setItem('username', credentials.username);
       alert('Login successful');
